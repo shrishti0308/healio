@@ -5,18 +5,19 @@ import ReactDatePicker from "react-datepicker";
 import { Control } from "react-hook-form";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import "react-datepicker/dist/react-datepicker.css";
 
-import { Checkbox } from "./checkbox";
+import { Checkbox } from "./ui/checkbox";
 import {
   FormControl,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
-} from "./form";
-import { Input } from "./input";
-import { Select, SelectContent, SelectTrigger, SelectValue } from "./select";
-import { Textarea } from "./textarea";
+} from "./ui/form";
+import { Input } from "./ui/input";
+import { Select, SelectContent, SelectTrigger, SelectValue } from "./ui/select";
+import { Textarea } from "./ui/textarea";
 
 export enum FormFieldType {
   INPUT = "input",
