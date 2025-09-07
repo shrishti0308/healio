@@ -106,7 +106,7 @@ export const updateAppointment = async ({
       throw new Error("Appointment not found");
     }
 
-    const smsMessage = `Him it's Healio.
+    const smsMessage = `Hi, it's Healio.
     ${
       type === "schedule"
         ? `Your appointment has been scheduled for ${
