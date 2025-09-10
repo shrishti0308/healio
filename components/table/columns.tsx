@@ -2,9 +2,6 @@
 
 import { ColumnDef } from "@tanstack/react-table";
 
-import { Button } from "../ui/button";
-import { MoreHorizontal } from "lucide-react";
-import { DropdownMenuItem } from "@radix-ui/react-dropdown-menu";
 import { Appointment } from "@/types/appwrite.types";
 import StatusBadge from "../StatusBadge";
 import { formatDateTime } from "@/lib/utils";

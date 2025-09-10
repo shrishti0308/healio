@@ -94,7 +94,7 @@ const AppointmentForm = ({
       } else {
         const appointmentToUpdate = {
           userId,
-          appointmentId: appointment?.$id,
+          appointmentId: appointment?.$id || "",
           appointment: {
             primaryPhysician: values?.primaryPhysician,
             schedule: new Date(values?.schedule),
