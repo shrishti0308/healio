@@ -33,7 +33,7 @@ const PatientAppointments = async ({
         <section className="w-full space-y-4">
           <h1 className="header">Welcome back, {patient?.name} 👋</h1>
           <p className="text-dark-700">
-            Here's an overview of your appointments
+            Here&apos;s an overview of your appointments
           </p>
         </section>
 
@@ -81,7 +81,7 @@ const PatientAppointments = async ({
               />
               <h3 className="text-24-bold mb-2">No appointments yet</h3>
               <p className="text-dark-700 mb-6 text-center max-w-md">
-                You haven't booked any appointments yet. Book your first
+                You haven&apos;t booked any appointments yet. Book your first
                 appointment to get started with Healio.
               </p>
               <Button asChild className="shad-primary-btn">
