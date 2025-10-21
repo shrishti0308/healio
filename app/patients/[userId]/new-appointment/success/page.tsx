@@ -1,10 +1,9 @@
+import { Button } from "@/components/ui/button";
+import { Doctors } from "@/constants/index";
 import { getAppointment } from "@/lib/actions/appointment.actions";
+import { formatDateTime } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { Doctors } from "@/constants/index";
-import { formatDateTime } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 
 const Success = async ({
   params: { userId },
@@ -66,13 +65,21 @@ const Success = async ({
           </div>
         </section>
 
-        <Button variant="outline" className="shad-primary-btn" asChild>
-          <Link href={`/patients/${userId}/new-appointment`}>
-            New Appointments
-          </Link>
-        </Button>
+        <div className="flex flex-col gap-4 w-full max-w-md">
+          <Button className="shad-primary-btn" asChild>
+            <Link href={`/patients/${userId}/appointments`}>
+              View All Appointments
+            </Link>
+          </Button>
 
-        <p className="copyright">© 2025 Healio</p>
+          <Button variant="outline" className="shad-primary-btn" asChild>
+            <Link href={`/patients/${userId}/new-appointment`}>
+              Book Another Appointment
+            </Link>
+          </Button>
+        </div>
+
+        <p className="copyright">Â© 2025 Healio</p>
       </div>
     </div>
   );
