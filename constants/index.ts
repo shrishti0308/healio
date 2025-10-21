@@ -62,7 +62,7 @@ export const Doctors = [
     name: "Jane Powell",
   },
   {
-    image: "/assets/images/dr-remirez.png",
+    image: "/assets/images/dr-ramirez.png",
     name: "Alex Ramirez",
   },
   {
