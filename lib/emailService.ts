@@ -1,6 +1,10 @@
 "use server";
 
 import {
+  AppointmentReminderData,
+  appointmentReminderTemplate,
+} from "@/lib/email-templates/appointmentReminder";
+import {
   AppointmentConfirmationData,
   appointmentConfirmationTemplate,
 } from "./email-templates/appointmentConfirmation";
@@ -101,6 +105,22 @@ export const sendAppointmentUpdate = async (
     subject,
     html,
     text,
+  });
+};
+
+// Appointment Reminder Email
+export const sendAppointmentReminder = async (
+  to: string,
+  data: AppointmentReminderData
+): Promise<boolean> => {
+  const subject = `Reminder: Appointment Tomorrow with Dr. ${data.doctorName}`;
+  const html = appointmentReminderTemplate(data);
+
+  return await sendEmail({
+    to,
+    subject,
+    html,
+    text: `Hello ${data.patientName}, this is a reminder that you have an appointment with Dr. ${data.doctorName} tomorrow, ${data.appointmentDate} at ${data.appointmentTime}. Appointment ID: ${data.appointmentId}. Please arrive 15 minutes early.`,
   });
 };
 
